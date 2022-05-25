@@ -76,6 +76,14 @@
             </tr>
           </tbody>
         </table>
+        <div class="buscar">
+          <button id="buscar-paciente" class="botao bto-principal">
+            Buscar Paciente
+          </button>
+          <span id="erro-ajax" class="invisivel"
+            >Erro ao buscar os pacientes</span
+          >
+        </div>
       </section>
     </main>
 
@@ -83,44 +91,46 @@
       <h2 id="titulo-form">Adicionar novo paciente</h2>
       <ul id="mensagens-erro"></ul>
       <form id="form-adiciona">
-        <div class="grupo">
-          <label for="nome">Nome:</label>
-          <input
-            id="nome"
-            name="nome"
-            type="text"
-            placeholder="digite o nome do seu paciente"
-            class="campo"
-          />
-        </div>
-        <div class="grupo">
-          <label for="peso">Peso:</label>
-          <input
-            id="peso"
-            name="peso"
-            type="text"
-            placeholder="digite o peso do seu paciente"
-            class="campo campo-medio"
-          />
-        </div>
-        <div class="grupo">
-          <label for="altura">Altura:</label>
-          <input
-            id="altura"
-            name="altura"
-            type="text"
-            placeholder="digite a altura do seu paciente"
-            class="campo campo-medio"
-          />
-        </div>
-        <div class="grupo">
-          <label for="gordura">% de Gordura:</label>
-          <input
-            id="gordura"
-            type="text"
-            placeholder="digite a porcentagem de gordura do seu paciente"
-            class="campo campo-medio"
-          />
+        <div class="grupos">
+          <div class="grupo">
+            <label for="nome">Nome:</label>
+            <input
+              id="nome"
+              name="nome"
+              type="text"
+              placeholder="digite o nome do seu paciente"
+              class="campo"
+            />
+          </div>
+          <div class="grupo">
+            <label for="peso">Peso:</label>
+            <input
+              id="peso"
+              name="peso"
+              type="text"
+              placeholder="digite o peso do seu paciente"
+              class="campo campo-medio"
+            />
+          </div>
+          <div class="grupo">
+            <label for="altura">Altura:</label>
+            <input
+              id="altura"
+              name="altura"
+              type="text"
+              placeholder="digite a altura do seu paciente"
+              class="campo campo-medio"
+            />
+          </div>
+          <div class="grupo">
+            <label for="gordura">% de Gordura:</label>
+            <input
+              id="gordura"
+              type="text"
+              placeholder="digite a porcentagem de gordura do seu paciente"
+              class="campo campo-medio"
+            />
+          </div>
         </div>
 
         <button id="adicionar-paciente" class="botao bto-principal">
@@ -133,5 +143,6 @@
     <script src="js/form.js"></script>
     <script src="js/removerPacientes.js"></script>
     <script src="js/filtro.js"></script>
+    <script src="js/buscarPaciente.js"></script>
   </body>
 </html>
