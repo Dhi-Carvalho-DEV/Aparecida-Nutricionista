@@ -1,35 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@400;500;700&family=Ubuntu:wght@700&display=swap');
+
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #fbb141;
+  --title-color: #8ac33b;
+  --text-color: #58703b;
+  --border-color: #b59051;
+
+  --title-font: 'Dancing Script', cursive;
+
+  font-size: 62.5%;
+}
+
 body {
-  font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
-  font-size: 14px;
-}
-
-header {
-  background-color: #333;
-  height: 3em;
-  color: #fff;
-  margin-bottom: 1em;
-}
-
-header h1 {
-  font-size: 2em;
-  display: inline-block;
-  vertical-align: middle;
-}
-header h2 {
-  font-size: 2em;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-header .container:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  vertical-align: middle;
+  font-family: 'Poppins', sans-serif;
+  background-color: #707e52;
+  color: var(--text-color);
 }
 
 .container {
@@ -38,150 +29,129 @@ header .container:before {
   margin: 0 auto;
 }
 
-section {
-  margin: 2em 0;
-  overflow: hidden;
+header {
+  background-color: #58703b;
+  height: 8rem;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+header .container img {
+  width: 6rem;
+}
+
+header .container h1 {
+  font-size: 4rem;
+  font-family: var(--title-font);
+  color: var(--primary-color);
 }
 
 section h2 {
-  font-size: 2em;
+  font-family: var(--title-font);
+  font-size: 3rem;
+  color: var(--title-color);
   display: block;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 0.5em;
-}
-
-table {
-  width: 100%;
-  margin-bottom: 0.5em;
-  table-layout: fixed;
-}
-
-td,
-th {
-  padding: 0.7em;
-  margin: 0;
-  border: 1px solid #ccc;
-  text-align: center;
-}
-
-th {
-  font-weight: bold;
-  background-color: #eee;
-}
-
-label {
-  color: #555;
-  display: block;
-  margin-bottom: 0.2em;
-}
-
-.campo {
-  margin: 0;
-  padding-bottom: 1em;
-  width: 100%;
-  border: 1px solid #ccc;
-  padding: 0.7em;
-  width: 100%;
-}
-
-.campo-medio {
-  display: inline-block;
-  padding-right: 0.5em;
-}
-
-.grupo {
-  width: 45%;
-  display: inline-block;
-  padding: 10px 0px;
-  margin-inline: 19px;
-}
-
-.buscar {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-}
-
-.buscar span {
-	font-size: 1.5em;
-	font-weight: 700;
-	color: red;
-}
-
-button {
-  padding-inline: 1em;
-  padding-block: 0.5em;
-  border: 0;
-  border-radius: 5px;
-  border-bottom: 3px solid;
-  font-size: 1.2em;
-  cursor: pointer;
-  color: #fff;
-  background-color: #0c8cd3;
-  border-color: #04324c;
-  width: 20%;
-  display: block;
-  clear: both;
-  margin-block: 1em;
-}
-
-#adicionar-paciente {
-  margin-inline: auto;
-}
-
-button:active {
-  margin-top: 0px;
-  border: 0;
-}
-
-button[disabled='disabled'],
-button:disabled {
-  background-color: gray;
-  border-color: darkgray;
-}
-
-.adicionar-paciente {
-  margin-top: 30px;
-}
-
-.campo-invalido {
-  border: 1px solid red;
-}
-
-.paciente-invalido {
-  background-color: lightcoral;
-}
-
-#mensagens-erro {
-  color: red;
-}
-
-.fadeOut {
-  opacity: 0;
-  transition: 0.5s;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
 }
 
 .filtro {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
+  font-family: 'Ubuntu', sans-serif;
+  margin-bottom: 1rem;
 }
 
 .filtro label {
-  font-size: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2rem;
   font-weight: 700;
-  color: black;
-  padding-inline: 10px;
+  color: var(--border-color);
+  padding-inline: 1rem;
 }
 
 #filtrar-tabela {
-  width: 300px;
-  height: 35px;
-  border: 1px solid black;
-  border-radius: 8px;
-  padding-left: 10px;
+  width: 30rem;
+  height: 3.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.8rem;
+  padding-left: 1rem;
+}
+
+#filtrar-tabela::placeholder {
+  color: var(--border-color);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  table-layout: fixed;
+}
+
+td,
+th {
+  padding: 0.7rem;
+  margin: 0;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+th {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+}
+
+td {
+  color: whitesmoke;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: whitesmoke;
+  background-color: var(--title-color);
+  width: auto;
+  margin-block: 1rem;
+
+  transition: 400ms;
+}
+
+button:hover {
+  background-color: var(--text-color);
+}
+
+#buscar-paciente {
+  margin-block: 2rem;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: 0.5s;
 }
 
 .invisivel {
